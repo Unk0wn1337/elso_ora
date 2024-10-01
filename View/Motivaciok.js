@@ -25,6 +25,9 @@ export default class Motivaciok{
 
     }
 
+    // this.#darabszam.append(this.#model.getLista()[index])
+    
+
 
 
     setDarab(elem){

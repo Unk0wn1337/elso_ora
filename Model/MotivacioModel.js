@@ -25,6 +25,7 @@ export default class MotivacioModel{
             "Ne feledd: a legnehezebb utakon járva találjuk meg a legszebb kilátásokat."
         ];
         this.#szamlalo = 0;
+        this.randomizacio()
     }
     
     getLista(){
@@ -32,17 +33,27 @@ export default class MotivacioModel{
     }
 
     randomizacio(){
-      
-    }
+        for (let i = this.#lista.length - 1; i >= 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let temp = this.#lista[i];
+            this.#lista[i] = this.#lista[j];
+            this.#lista[j] = temp
 
-    szamlaloNovel(){
-        this.#szamlalo++;
-    }
-
-    getSzamlaloNovel(){
-        return this.#szamlalo;
-    }
-
-    
+            
+        }
         
-}
+      }
+      
+      szamlaloNovel(){
+          this.#szamlalo++;
+        }
+        
+        getSzamlaloNovel(){
+            return this.#szamlalo;
+        }
+    }
+
+
+  
+    
+
