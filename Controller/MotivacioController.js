@@ -26,13 +26,12 @@ export default class MotivacioController {
         $(window).on("kattintas", (event) => {
             this.#darabszam.empty();
             let index = event.detail;
-            this.#darabszam.append(this.#model.getLista()[index])
+            this.#motivaciokView.szovegMegjelenit(this.#model.getLista(),index)
             this.#motivaciokView = new Motivaciok(this.#szuloELEM, this.#model.getLista())
             this.#szamlalo.empty();
             this.#model.szamlaloNovel()
-            this.#szamlalo.append( `felnyitottak szama: <p>${this.#model.getSzamlaloNovel()}</p>`
-                
-            )
+            this.#motivaciokView.darabSzamlalo(this.#model.getSzamlaloNovel())
+
         })
     }
 }

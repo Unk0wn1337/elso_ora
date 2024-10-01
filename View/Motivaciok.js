@@ -5,12 +5,16 @@ export default class Motivaciok{
     #lista;
     #elem;
     #darabszam
+    #model
+    #szamlalo;
     constructor(szuloELEM, lista){
         this.#szuloELEM = szuloELEM;
         this.#lista = lista;
         this.#szuloELEM.empty();
         this.kiir()
         this.#darabszam =  $(".darabszam");
+        this.#szamlalo = $(".szamlalo");
+
     }
 
     kiir(){
@@ -21,11 +25,14 @@ export default class Motivaciok{
         });
     }
 
-    szovegMegjelenit(){
-
+    szovegMegjelenit(lista,index){
+        this.#darabszam.append(this.#lista[index])
     }
 
-    // this.#darabszam.append(this.#model.getLista()[index])
+    darabSzamlalo(szam){
+        this.#szamlalo.append(`<p>felnyitottak szama: ${szam}</p>`)
+    }
+
     
 
 

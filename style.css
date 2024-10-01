@@ -12,3 +12,18 @@
 .darabszam {
     text-align: center;
 }
+
+.szamlalo {
+    text-align: center;
+}
+
+@media screen and (max-width: 580px) {
+    .container {
+       grid-template-columns: 1fr 1fr;
+    }
+  }
+@media screen and (max-width: 380px) {
+    .container {
+       grid-template-columns: 1fr;
+    }
+  }
