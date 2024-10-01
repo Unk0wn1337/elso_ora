@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    border: solid 2px black;
+}
+
+.kartya {
+    border: solid 2px black;
+
+}
+
+.darabszam {
+    text-align: center;
+}
