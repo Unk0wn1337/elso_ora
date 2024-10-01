@@ -3,9 +3,7 @@ import Motivacio from "./Motivacio.js";
 export default class Motivaciok{
     #szuloELEM;
     #lista;
-    #elem;
     #darabszam
-    #model
     #szamlalo;
     constructor(szuloELEM, lista){
         this.#szuloELEM = szuloELEM;
@@ -37,7 +35,5 @@ export default class Motivaciok{
 
 
 
-    setDarab(elem){
-        this.#elem = elem;
-    }
+   
 }
