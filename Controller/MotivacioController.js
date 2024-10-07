@@ -27,7 +27,6 @@ export default class MotivacioController {
             this.#darabszam.empty();
             let index = event.detail;
             this.#motivaciokView.szovegMegjelenit(this.#model.getLista(),index)
-            this.#motivaciokView = new Motivaciok(this.#szuloELEM, this.#model.getLista())
             this.#szamlalo.empty();
             this.#model.szamlaloNovel()
             this.#motivaciokView.darabSzamlalo(this.#model.getSzamlaloNovel())
